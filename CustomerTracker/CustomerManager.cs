@@ -8,14 +8,16 @@ namespace CustomerTracker
 {
     class CustomerManager
     {
-        List<Customer> _customers;
+        List<Customer> _customers = new List<Customer>();
         public void Add(Customer customer)
         {
-
+            _customers.Add(customer);
             Console.WriteLine("{0} is added.",customer.FirstName);
         }
         public void Delete(Customer customer)
         {
+            Customer customerToRemove = customer;
+            _customers.Remove(customerToRemove);
             Console.WriteLine("{0} is deleted.", customer.FirstName);
         }
         public List<Customer> List()
