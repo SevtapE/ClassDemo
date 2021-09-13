@@ -8,7 +8,11 @@ namespace CustomerTracker
 {
     class CustomerManager
     {
-        List<Customer> _customers = new List<Customer>();
+        List<Customer> _customers;
+        public CustomerManager()
+        {
+            _customers = new List<Customer>();
+        }
         public void Add(Customer customer)
         {
             _customers.Add(customer);
